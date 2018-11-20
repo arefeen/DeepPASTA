@@ -18,7 +18,7 @@ of the gene or not.
 
 		conda env create -f DeepPASTA_env.yml
 		source activate DeepPASTA_env
-
+4. Please [**download**](https://www.cs.ucr.edu/~aaref001/DeepPASTA_site.html) the trained parameters and put them in respective folders. 
 
 ## PolyA site prediction
 In order to predict polyA sites, please use DeepPASTA_polyA_site_prediction_testing.py of polyA_site_prediction folder. 
@@ -46,7 +46,7 @@ OPTIONS
 
 EXAMPLE
 
-	python DeepPASTA_polyA_site_prediction_testing.py -testSeq merged_sequence_all.chr15_Y.hg19.fa -testSS merged_secondary_structure_all.chr15_Y.hg19.txt  
+	python DeepPASTA_polyA_site_prediction_testing.py -testSeq sample_sequence_input.hg19.fa -testSS sample_secondary_structure_input.txt  
 
 
 ### Input and output file of the polyA site prediction model
@@ -81,7 +81,7 @@ OPTIONS
 
 EXAMPLE
 
-	python DeepPASTA_tissue_specific_polyA_site_prediction_testing.py -test merged_sequence_all.chr15_Y.hg19.fa -tests merged_secondary_structure_all.chr15_Y.hg19.txt -testl readCount_polyA_site_smalldata.chr15_Y.txt
+	python DeepPASTA_tissue_specific_polyA_site_prediction_testing.py -test sample_sequence_input.hg19.fa -tests sample_secondary_structure_input.txt -testl sample_tissue_specific_label.txt
 
 ### Input and output of tissue-specific polyA site prediction model
 The model takes two files: sequence and RNA secondary structure files. The sequence file is a FASTA file that contains two lines per example.
@@ -112,7 +112,7 @@ OPTIONS
 
 EXAMPLE
 
-	python DeepPASTA_relatively_dominant_liver_testing.py -test merged_two_polyASites_liver_test_13_Y.txt
+	python DeepPASTA_relatively_dominant_liver_testing.py -test sample_relatively_dominant_input_liver.txt
 
 ### Input and output of tissue-specific relatively dominant polyA site prediction model
 If the user wants to calculate the AUC and AUPRC values of the prediction, he/she must input a file that contains gene name, first polyA site location, second
@@ -144,7 +144,7 @@ OPTOINS
 
 EXAMPLE
 
-	python DeepPASTA_absolutely_dominant_liver_testing.py -test merged_liver_absolute_dominance_13_Y.txt
+	python DeepPASTA_absolutely_dominant_liver_testing.py -test sample_absolutely_dominant_input_liver.txt
 
 ### Input and output of tissue-specific absolutely dominant polyA site prediction model
 If the user wants to calculate the AUC and AUPRC values of the prediction, he/she must input a file that contains gene name, tissue name, polyA site location, sequence
@@ -154,4 +154,4 @@ prediction. Sample input files of the tissue-specific absolutely dominant polyA 
 
 
 
-If you have any question or suggestion please feel free to email: aaref001@ucr.edu or ashraful.arefeen@csebuet.org
+Note: If you have any question or suggestion please feel free to email: aaref001@ucr.edu or ashraful.arefeen@csebuet.org
