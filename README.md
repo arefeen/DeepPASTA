@@ -5,8 +5,8 @@ protein by the transcription, post-transcriptional and translation processes. On
 process is the polyadenylation process. This process consists of two steps: cleavage near the 3' end of a pre-mRNA and addition of a
 polyA tail at the cleavage site or polyA site. DeepPASTA is a tool for predicting such polyA sites from sequence and RNA secondary 
 structure data. The tool can also predict tissue-specific polyA sites from sequence and RNA secondary structure data. When two polyA
-sites of a gene (of a particular tissue) are given the tool can predict relatively dominant polyA site. Moreover, when a polyA site
-of a gene (of a particular tissue) is given it can predict whether that site is one of the most (absolutely) dominant polyA sites 
+sites of a gene (of a particular tissue) are given, the tool can predict relatively dominant polyA site. Moreover, when a polyA site
+of a gene (of a particular tissue) is given, it can predict whether that site is one of the most (absolutely) dominant polyA sites 
 of the gene or not.
 
 
@@ -89,7 +89,7 @@ The first line is the title of the sequence and the second line is the 200 nts s
 The first line is the title and the next three lines for three RNA secondary structures. The model outputs AUC and AUPRC values when -testl option
 is used. Using -testl option the user have to give the ground truth data. For each example, the ground truth data has two lines: these two lines are 
 title and read counts (of nine tissues separated by comma), respectively. If -o option is used the model outputs tissue-specific polyA site prediction 
-in a file. For each input example the output file has a line containing title and nine likelihood values (separated by comma) for nine tissues.
+in a file. For each input example, the output file has a line containing title and nine likelihood values (separated by comma) for nine tissues.
 
 
 ## Tissue-specific relatively dominant polyA site prediction
@@ -104,7 +104,7 @@ USAGE
 
 OPTIONS
 	
-	-test <input_file>	An input file that contains gene name, two polyA sites, two sequences around the polyA sites, the sequences 
+	-test <input_file>	An input file that contains the gene name, two polyA sites, two sequences around the polyA sites, the sequences 
 				corresponding RNA secondary structures. If the user wants to caculate the AUC and AUPRC values of the prediction,
 				he/she also have to provide the polyA sites corresponding read counts in this file.
 
@@ -115,11 +115,11 @@ EXAMPLE
 	python DeepPASTA_relatively_dominant_liver_testing.py -test sample_relatively_dominant_input_liver.txt
 
 ### Input and output of tissue-specific relatively dominant polyA site prediction model
-If the user wants to calculate the AUC and AUPRC values of the prediction, he/she must input a file that contains gene name, first polyA site location, second
+If the user wants to calculate the AUC and AUPRC values of the prediction, he/she must input a file that contains the gene name, first polyA site location, second
 polyA site location, sequence (200 nts) around the first polyA site, sequence (200 nts) around the second polyA site, read count of the first polyA site, 
 read count of the second polyA site, RNA secondary structure of the first sequence, and RNA secondary structure of the second sequence. If the user wants 
 to output the prediction result to a file using -o option, the input file must contains all the above information except the read counts. The output file contains 
-gene name, the two polyA site locations and the probabilities of relative dominance of these two polyA sites. Sample input files of the tissue-specific relatively 
+the gene name, the two polyA site locations and the probabilities of relative dominance of these two polyA sites. Sample input files of the tissue-specific relatively 
 dominant polyA site prediction model are given in the sample_input folder. 
 
 
@@ -136,7 +136,7 @@ USAGE
 
 OPTOINS
 
-	-test <input_file>	An input file that contains gene name, tissue name, polyA site location, sequence around the polyA site, RNA secondary structure 
+	-test <input_file>	An input file that contains the gene name, tissue name, polyA site location, sequence around the polyA site, RNA secondary structure 
 				of the sequence. If the user wants to calculte the AUC and AUPRC values of the prediction, he/she have to provide the
 				label of the polyA site in this file.
 
@@ -147,9 +147,9 @@ EXAMPLE
 	python DeepPASTA_absolutely_dominant_liver_testing.py -test sample_absolutely_dominant_input_liver.txt
 
 ### Input and output of tissue-specific absolutely dominant polyA site prediction model
-If the user wants to calculate the AUC and AUPRC values of the prediction, he/she must input a file that contains gene name, tissue name, polyA site location, sequence
+If the user wants to calculate the AUC and AUPRC values of the prediction, he/she must input a file that contains the gene name, tissue name, polyA site location, sequence
 (200 nts) around the polyA site, RNA secondary structure of the sequence, and absolutely dominant label. If the user wants to output the prediction result to a file using
--o option, the input file must contains all the above information except the label. The output file contains gene name, polyA site location and likelihood value of the 
+-o option, the input file must contains all the above information except the label. The output file contains the gene name, polyA site location and likelihood value of the 
 prediction. Sample input files of the tissue-specific absolutely dominant polyA site prediction model are given in the sample_input folder.
 
 
