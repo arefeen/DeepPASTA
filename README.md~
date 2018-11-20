@@ -54,8 +54,8 @@ The model takes two files as input: sequence and RNA secondary structure files. 
 The first line is the title of the sequence and the second line is the 200 nts sequence. The RNA secondary structure has four lines per example.
 The first line is the title and the next three lines for three RNA secondary structures. The model outputs AUC and AUPRC values when -o option
 is not used. In order to get the AUC and AUPRC values, the user must give the ground truth values using the title. E.g. title_ground_truth_value; 
-for a positive sequence example, the title is >chr15_100354095_positive_1; on the other hand, the title of a negative sequence example is >chr15_100565120_positive_0. 
-If the user uses -o option, the model will output the predicted likelihood values in an output file. 
+for a positive sequence example, the title is >chr15_100354095_positive_1; on the other hand, the title of a negative sequence example is 
+>chr15_100565120_positive_0. If the user uses -o option, the model will output the predicted likelihood values in an output file. 
 
 	
 ## Tissue-specific polyA site prediction
