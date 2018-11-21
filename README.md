@@ -13,11 +13,13 @@ of the gene or not.
 ### Requirements
 1. The tool runs on linux machine.
 2. [Anaconda2-4.4.1](https://docs.anaconda.com/anaconda/install/linux/). 
-3. After installing Anaconda2, please use DeepPASTA_env.yml file to create DeepPASTA suitable environment. 
+3. After installing Anaconda2, please use DeepPASTA_env1.yml file to create DeepPASTA suitable environment. 
    Please run the following command to activate the suitable environment:
 
-		conda env create -f DeepPASTA_env.yml
+		conda env create -f DeepPASTA_env1.yml
 		source activate DeepPASTA_env
+
+   Note: If the anaconda environment creates problem, please follow the steps written in "Creating environment for DeepPASTA" section.
 4. Please [**download**](https://www.cs.ucr.edu/~aaref001/DeepPASTA_site.html) the trained parameters and put them in respective folders. 
 
 ## PolyA site prediction
@@ -152,6 +154,13 @@ If the user wants to calculate the AUC and AUPRC values of the prediction, he/sh
 -o option, the input file must contains all the above information except the label. The output file contains the gene name, polyA site location and likelihood value of the 
 prediction. Sample input files of the tissue-specific absolutely dominant polyA site prediction model are given in the sample_input folder.
 
+## Creating environment for DeepPASTA
+After installing anaconda2, please run the following commands to create the environment for DeepPASTA:
+
+	conda create -n DeepPASTA_env python=2.7.5
+	source activate DeepPASTA_env
+	conda install -c anaconda keras
+	conda install -c anaconda scikit-learn
 
 
 Note: If you have any question or suggestion please feel free to email: aaref001@ucr.edu or ashraful.arefeen@csebuet.org
