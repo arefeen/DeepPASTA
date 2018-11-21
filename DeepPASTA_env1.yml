@@ -1,4 +1,4 @@
-name: DeepPASTA_env1
+name: DeepPASTA_env
 channels:
 - !!python/unicode
   'anaconda'
@@ -16,10 +16,6 @@ dependencies:
 - !!python/unicode
   'backports.weakref=1.0.post1=py27_0'
 - !!python/unicode
-  'binutils_impl_linux-64=2.31.1=h6176602_1'
-- !!python/unicode
-  'binutils_linux-64=2.31.1=h6176602_3'
-- !!python/unicode
   'blas=1.0=mkl'
 - !!python/unicode
   'enum34=1.1.6=py27_1'
@@ -30,15 +26,7 @@ dependencies:
 - !!python/unicode
   'gast=0.2.0=py27_0'
 - !!python/unicode
-  'gcc_impl_linux-64=7.3.0=habb00fd_1'
-- !!python/unicode
-  'gcc_linux-64=7.3.0=h553295d_3'
-- !!python/unicode
   'grpcio=1.12.1=py27hdbcaa40_0'
-- !!python/unicode
-  'gxx_impl_linux-64=7.3.0=hdf63c60_1'
-- !!python/unicode
-  'gxx_linux-64=7.3.0=h553295d_3'
 - !!python/unicode
   'h5py=2.8.0=py27h989c5e5_3'
 - !!python/unicode
@@ -46,21 +34,17 @@ dependencies:
 - !!python/unicode
   'intel-openmp=2019.0=118'
 - !!python/unicode
-  'keras=2.0.2=py27_0'
+  'keras=2.2.4=0'
 - !!python/unicode
   'keras-applications=1.0.6=py27_0'
+- !!python/unicode
+  'keras-base=2.2.4=py27_0'
 - !!python/unicode
   'keras-preprocessing=1.0.5=py27_0'
 - !!python/unicode
   'libgcc-ng=8.2.0=hdf63c60_1'
 - !!python/unicode
-  'libgfortran=3.0.0=1'
-- !!python/unicode
   'libgfortran-ng=7.3.0=hdf63c60_0'
-- !!python/unicode
-  'libgpuarray=0.7.6=h14c3975_0'
-- !!python/unicode
-  'libopenblas=0.2.20=h9ac9557_7'
 - !!python/unicode
   'libprotobuf=3.6.1=hd408876_0'
 - !!python/unicode
@@ -68,37 +52,29 @@ dependencies:
 - !!python/unicode
   'linecache2=1.0.0=py27_0'
 - !!python/unicode
-  'mako=1.0.7=py27_0'
-- !!python/unicode
   'markdown=3.0.1=py27_0'
 - !!python/unicode
-  'markupsafe=1.1.0=py27h7b6447c_0'
+  'mkl=2019.0=118'
 - !!python/unicode
-  'mkl=2017.0.4=h4c4d0af_0'
+  'mkl_fft=1.0.6=py27h7dd41cf_0'
 - !!python/unicode
-  'mkl-service=1.1.2=py27_3'
-- !!python/unicode
-  'mkl_fft=1.0.1=py27h3010b51_0'
-- !!python/unicode
-  'mkl_random=1.0.1=py27h629b387_0'
+  'mkl_random=1.0.1=py27h4414c95_1'
 - !!python/unicode
   'mock=2.0.0=py27_0'
 - !!python/unicode
-  'numpy=1.13.3=py27ha266831_3'
+  'numpy=1.15.4=py27h1d66e8a_0'
 - !!python/unicode
-  'numpy-base=1.14.3=py27h0ea5e3f_1'
+  'numpy-base=1.15.4=py27h81de0dd_0'
 - !!python/unicode
   'pbr=5.1.1=py27_0'
 - !!python/unicode
   'protobuf=3.6.1=py27he6710b0_0'
 - !!python/unicode
-  'pygpu=0.7.6=py27h035aef0_0'
-- !!python/unicode
   'pyyaml=3.13=py27h14c3975_0'
 - !!python/unicode
-  'scikit-learn=0.18.1=np113py27_1'
+  'scikit-learn=0.20.0=py27h4989274_1'
 - !!python/unicode
-  'scipy=0.19.1=np113py27_0'
+  'scipy=1.1.0=py27hfa4b5c9_1'
 - !!python/unicode
   'six=1.11.0=py27_1'
 - !!python/unicode
@@ -109,8 +85,6 @@ dependencies:
   'tensorflow-base=1.12.0=mkl_py27h3c3e929_0'
 - !!python/unicode
   'termcolor=1.1.0=py27_1'
-- !!python/unicode
-  'theano=1.0.3=py27hfd86e86_0'
 - !!python/unicode
   'traceback2=1.4.0=py27_0'
 - !!python/unicode
@@ -141,9 +115,5 @@ dependencies:
   'wheel=0.29.0=py27_0'
 - !!python/unicode
   'zlib=1.2.11=0'
-- pip:
-  - mkl-fft==1.0.0
-  - mkl-random==1.0.1
-  - selenium==3.9.0
-prefix: !!python/unicode '/rhome/aaref001/.conda/envs/DeepPASTA_env1'
+prefix: !!python/unicode '/rhome/aaref001/.conda/envs/DeepPASTA_env'
 
