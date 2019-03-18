@@ -164,7 +164,7 @@ After installing anaconda2, please run the following commands to create the envi
 
 ## Genome-wide polyA site prediction for human
 We have used DeepPASTA to perform a genome-wide polyA site prediction for human based on the PolyA-Seq data in (Derti *et al.*, 2012).
-The result of the prediction can be found [**here**](http://www.cs.ucr.edu/~aaref001/genome_wide_prediction/genome_wide_polyA_site_prediction_human.txt).
+The prediction results can be found [**here**](http://www.cs.ucr.edu/~aaref001/genome_wide_prediction/genome_wide_polyA_site_prediction_human.txt).
 
 ## Reference
 Derti, A. *et al.*, (2012) A quantitative atlas of polyadenylation in five mammals. *Genome Research*, **22** (6), 1173-1183 
