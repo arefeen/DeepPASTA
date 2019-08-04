@@ -162,11 +162,25 @@ After installing anaconda2, please run the following commands to create the envi
 	conda install -c anaconda keras
 	conda install -c anaconda scikit-learn
 
+## How to generate secondary structures from sequences?
+The first step of generating secondary structure uses RNAshapes (Steffen *et al.*, 2005). The output from RNAshapes is then converted to DeepPASTA suitable format
+using sequence of commands. Following are the necessary commands to generate DeepPASTA suitable secondary structures from sequences: 
+
+	./RNAshapes -f <input_file_in_fa_format> -s -c 5 -t 1 -w 100 -W 100 -O 'D{%s\n}' > <output_file_in_txt_format>
+	python combining_substructure.py -i <output_from_the_previous_command> -o <output_file_in_txt_format>
+	python filtering_number_of_ss.py -n 3 -i <output_from_the_previous_command> -o <output_file_in_txt_format>
+	python shape_assign_per_nucleotide.py -c 3 -i <output_from_the_previous_command> -o <output_file_in_txt_format>
+
+RNAshapes (Steffen *et al.*, 2005) is provided in the generating_secondary_structure_from_sequence directory. Please follow the manual of RNAshapes (Steffen *et al.*, 2005) 
+for the possible options. In filtering_number_of_ss.py and shape_assign_per_nucleotide.py scripts, 3 is used to generate the three most probable secondary structreus for a 
+given sequence. 
+
 ## Genome-wide polyA site prediction for human
 We have used DeepPASTA to perform a genome-wide polyA site prediction for human based on the PolyA-Seq data in (Derti *et al.*, 2012).
 The prediction results can be found [**here**](http://www.cs.ucr.edu/~aaref001/genome_wide_prediction/genome_wide_polyA_site_prediction_human.txt).
 
 ## Reference
-Derti, A. *et al.*, (2012) A quantitative atlas of polyadenylation in five mammals. *Genome Research*, **22** (6), 1173-1183 
+1. Derti, A. *et al.*, (2012) A quantitative atlas of polyadenylation in five mammals. *Genome Research*, **22** (6), 1173-1183 
+2. Steffen, P. *et al.*, (2005) RNAshapes: an integrated RNA analysis package based on abstract shapes. *Bioinformatics*, **22** (4), 500-503
  
 Note: If you have any question or suggestion please feel free to email: aaref001@ucr.edu or ashraful.arefeen@csebuet.org
