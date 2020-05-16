@@ -9,6 +9,22 @@ sites of a gene (of a particular tissue) are given, the tool can predict relativ
 of a gene (of a particular tissue) is given, it can predict whether that site is one of the most (absolutely) dominant polyA sites 
 of the gene or not.
 
+### Citation
+@article{10.1093/bioinformatics/btz283,
+    author = {Arefeen, Ashraful and Xiao, Xinshu and Jiang, Tao},
+    title = "{DeepPASTA: deep neural network based polyadenylation site analysis}",
+    journal = {Bioinformatics},
+    volume = {35},
+    number = {22},
+    pages = {4577-4585},
+    year = {2019},
+    month = {04},
+    issn = {1367-4803},
+    doi = {10.1093/bioinformatics/btz283},
+    url = {https://doi.org/10.1093/bioinformatics/btz283},
+    eprint = {https://academic.oup.com/bioinformatics/article-pdf/35/22/4577/30706799/btz283.pdf},
+}
+
 
 ### Requirements
 1. The tool runs on linux machine.
